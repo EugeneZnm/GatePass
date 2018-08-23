@@ -16,9 +16,10 @@ class Credentials:
     credential = []
 
     # 2.2 creating instances of Credentials
-    def __init__(self, account_name, password):
+    def __init__(self, user_name, service, password):
 
         # define properties for objects
-        self.account_name = account_name
+        self.user_name = user_name
+        self.service = service
         self.password = password
 
