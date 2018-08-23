@@ -11,5 +11,9 @@ class Userinfo:
         self.email = email
 
 
+class Credentials:
+    # 2.1 class variable to store credentials
+    credential = []
+
 
 
