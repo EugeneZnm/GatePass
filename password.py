@@ -15,5 +15,10 @@ class Credentials:
     # 2.1 class variable to store credentials
     credential = []
 
+    # 2.2 creating instances of Credentials
+    def __init__(self, account_name, password):
 
+        # define properties for objects
+        self.account_name = account_name
+        self.password = password
 
