@@ -80,6 +80,26 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credential.password, "123ert")
         self.assertEqual(self.new_credential.service, "whatsapp")
 
+    def test__save__credentials(self):
+
+        """
+        Test saving of single set of credentials
+
+        """
+        self.new_credential.save_credentials()
+        self.assertEqual(len(Credentials.credential), 1)
+
+    def test__save__multiple__credentials(self):
+
+        """
+        Test for saving of multiple credentials
+
+        """
+        self.new_credential.save_credentials()
+        test_credential = Credentials("Eugene znm", "whatsapp", "123ert")
+        test_credential.save_credentials()
+        self.assertEqual(len(Credentials.credential), 3)
+
 
 
 if __name__ == '__main__':

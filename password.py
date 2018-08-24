@@ -11,7 +11,7 @@ class Userinfo:
         self.passkey = passkey
 
     # 1.3 method saving user info objects into user details list
-    def save_details(self):
+    def save_userinfo(self):
         Userinfo.user_details.append(self)
 
 
@@ -27,3 +27,25 @@ class Credentials:
         self.service = service
         self.password = password
 
+    # @classmethod
+    # def check_userinfo(cls, first_name, last_name):
+    #
+    #     """
+    #     checking user credentials
+    #
+    #     """
+    #     current_userinfo = ""
+    #
+    #     for userinfo in Userinfo.user_details:
+    #
+    #         if userinfo.first_name == first_name and userinfo.last_name == last_name and userinfo.passkey == passkey:
+    #             current_userinfo == userinfo.first_name
+    #
+    #     return current_userinfo
+
+    def save_credentials(self):
+        """
+        Method to save credential
+
+        """
+        Credentials.credential.append(self)
