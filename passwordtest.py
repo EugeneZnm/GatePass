@@ -113,8 +113,19 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_credentials()
 
         self.assertEqual(len(Credentials.show_credentials(user_name)), 0)
-        
-        
-        
+
+    def test_find_by_service(self):
+        """
+        test display of credentials according to service
+        :return:
+        """
+        self.new_credential.save_credentials()
+        test_credential = Credentials('')
+        test_credential.save_credentials()
+
+        found_credential = Credentials.find_by_service('')
+        self.assertEqual(found_credential.service, test_credential.service)
+
+
 if __name__ == '__main__':
     unittest.main()
