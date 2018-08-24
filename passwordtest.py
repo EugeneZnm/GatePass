@@ -105,5 +105,16 @@ class TestCredentials(unittest.TestCase):
         Credentials.credential = []
         Userinfo.user_details = []
 
+    def test_show_credentials(self, user_name=None):
+        """
+        testing display of correct credentials
+        :return: 
+        """
+        self.new_credential.save_credentials()
+
+        self.assertEqual(len(Credentials.show_credentials(user_name)), 0)
+        
+        
+        
 if __name__ == '__main__':
     unittest.main()
