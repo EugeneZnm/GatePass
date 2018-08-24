@@ -1,12 +1,16 @@
+import string
+
+import random
+
+import pyperclip
+
+
 class Userinfo:
-
-
     # 1.1 class variable to store created objects
     user_details = []
 
     # 1.2 method creating instances of Userinfo
     def __init__(self, first_name, last_name, passkey):
-
         # define properties for objects
         self.first_name = first_name
         self.last_name = last_name
@@ -18,8 +22,6 @@ class Userinfo:
 
 
 class Credentials:
-
-
     # 2.1 class variable to store credentials
     credential = []
 
@@ -61,22 +63,34 @@ class Credentials:
 
     # 2.4 generating random passwords
 
-     def create_password(self, size=7, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
-         """
-         Generate random passwords function
+    def create_password(self, size=7, char=string.ascii_uppercase + string.ascii_lowercase + string.digits):
+        """
+        Generate random passwords function
 
-         """
-         paskey=''.join(random.choice(char) for _in range(size))
-         return paskey
+        """
+        paskey = ''.join(random.choice(char) for _ in range(size))
+        return paskey
 
-     # 2.6 show credentials of user
-    def show_credential(cls,):
+    # 2.6 show credentials of user
+    @classmethod
+    def show_credentials(cls, user_name):
         """
         method to show credentials of the user
 
         """
         userinfo_show_credential = []
         for credential in cls.show_credential:
-                if credential.user_name == user_name:
-                        userinfo_show_credential.append(credential)
+            if credential.user_name == user_name:
+                userinfo_show_credential.append(credential)
         return userinfo_show_credential
+
+    # 2.7 find service and return credentials
+    @classmethod
+    def find_by_service(cls, service):
+        """
+        method to find service and display credentials corresponding to service
+
+        """
+        for credential in cls.show_credential:
+            if credential.service == service:
+                return credential
