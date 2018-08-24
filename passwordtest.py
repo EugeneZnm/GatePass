@@ -71,8 +71,15 @@ class TestCredentials(unittest.TestCase):
         """
         self.new_credential = Credentials("Eugene znm", "whatsapp", "123ert")
 
-    def userinfo_save_details(self):
-        pass
+    def test__init(self):
+        """
+        checking for expected results
+
+        """
+        self.assertEqual(self.new_credential.user_name, "Eugene znm")
+        self.assertEqual(self.new_credential.password, "123ert")
+        self.assertEqual(self.new_credential.service, "whatsapp")
+
 
 
 if __name__ == '__main__':
