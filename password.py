@@ -1,4 +1,6 @@
 class Userinfo:
+
+
     # 1.1 class variable to store created objects
     user_details = []
 
@@ -16,6 +18,8 @@ class Userinfo:
 
 
 class Credentials:
+
+
     # 2.1 class variable to store credentials
     credential = []
 
@@ -49,3 +53,11 @@ class Credentials:
 
         """
         Credentials.credential.append(self)
+
+     def create_password(self, size=7, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+         """
+         Generate random passwords function
+
+         """
+         paskey=''.join(random.choice(char) for _in range(size))
+         return paskey
