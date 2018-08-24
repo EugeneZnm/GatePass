@@ -23,6 +23,9 @@ class Credentials:
     # 2.1 class variable to store credentials
     credential = []
 
+    # 2.5 creating list to display credentials
+    show_credential = []
+
     # 2.2 creating instances of Credentials
     def __init__(self, user_name, service, password):
 
@@ -47,12 +50,16 @@ class Credentials:
     #
     #     return current_userinfo
 
+    # 2.3
+
     def save_credentials(self):
         """
         Method to save credential
 
         """
         Credentials.credential.append(self)
+
+    # 2.4 generating random passwords
 
      def create_password(self, size=7, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
          """
@@ -61,3 +68,15 @@ class Credentials:
          """
          paskey=''.join(random.choice(char) for _in range(size))
          return paskey
+
+     # 2.6 show credentials of user
+    def show_credential(cls,):
+        """
+        method to show credentials of the user
+
+        """
+        userinfo_show_credential = []
+        for credential in cls.show_credential:
+                if credential.user_name == user_name:
+                        userinfo_show_credential.append(credential)
+        return userinfo_show_credential
