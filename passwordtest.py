@@ -2,10 +2,6 @@
 
 import unittest
 
-# import pyperclip
-
-import pyperclip
-
 # 2 import Userinfo class
 
 from password import Userinfo
@@ -42,6 +38,7 @@ class TestUserinfo(unittest.TestCase):
         test_userinfo = Userinfo("Genghis", "Khan", "qwer1234.")
         test_userinfo.save_userinfo()
         self.assertEqual(len(Userinfo.user_details), 2)
+
 
 
 class TestCredentials(unittest.TestCase):
@@ -98,9 +95,15 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_credentials()
         test_credential = Credentials("Eugene znm", "whatsapp", "123ert")
         test_credential.save_credentials()
-        self.assertEqual(len(Credentials.credential), 3)
+        self.assertEqual(len(Credentials.credential), 2)
 
+    def tearDown(self):
+        """
+        functions to clear credentials after every test
 
+        """
+        Credentials.credential = []
+        Userinfo.user_details = []
 
 if __name__ == '__main__':
     unittest.main()
