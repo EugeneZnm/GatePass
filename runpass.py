@@ -1,6 +1,9 @@
 # Importing Credentials class
+#
+# import pyperclip
+import string
 
-import pyperclip
+import random
 
 from password import Credentials
 
@@ -26,7 +29,7 @@ def save_userinfo(userinfo):
 
 # CREDENTIALS FUNCTIONS
 
-def create_credentials(uname, servicename, access):
+def create_credentials(uname: object, servicename: object, access: object) -> object:
     """
     function to create credentials
 
@@ -34,11 +37,29 @@ def create_credentials(uname, servicename, access):
     new_credential = Credentials(uname, servicename,access)
     return new_credential
 
+
+def save_credentials(credential):
+    """
+    function to save credentials
+
+    """
+    credential.save_credentials()
+
+
+def display_credentials():
+    """
+    function to show credentials
+
+    """
+    return Credentials.
+
+
 def main():
+    global uname, servicename, access
     print("Welcome Enter you Details")
     while True:
         print("Type in Shortcode to choose preferred action:"
-              "start - to enter user details,  save - to create credentials, gen - to generate random password")
+              "start - to enter user details,  save - to create credentials, keep - to display credentials")
 
         short_code = input().lower()
         if short_code == "start":
@@ -63,6 +84,28 @@ def main():
 
         elif short_code == 'save':
 
+            print("Enter name: ")
+            uname = input()
+
+            print("Service Used: ")
+            servicename = input()
+
+            print("Your Password is: ")
+
+            chars = "abcdefghijklmnopqrstuvwxyz123456789"
+            access = ''
+            for c in range(10):
+                access = random.choice(chars)
+                print(access)
+
+            save_credentials(create_credentials(uname, servicename, access))
+
+        elif short_code == 'keep':
+
+            if display_credentials():
+                print("Your stores credentials are: ")
+
+                for
 
 
 
