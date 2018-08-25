@@ -1,5 +1,7 @@
 # Importing Credentials class
 
+import pyperclip
+
 from password import Credentials
 
 # Importing Userinfo class
@@ -14,3 +16,45 @@ def create_userinfo(fname, lname, keypass):
     return new_userinfo
 
 
+def save_userinfo(userinfo):
+    """
+    function to save contacts
+
+    """
+    userinfo.save_userinfo()
+
+
+def main():
+    print("Welcome Enter you Details")
+    while True:
+        print("Type in Shortcode to choose preferred action:"
+              "start - to enter user details,  save - to create credentials, gen - to generate random password")
+
+        short_code = input().lower()
+        if short_code == "start":
+            print(" Enter User Info")
+
+            print("First Name:.")
+            fname = input()
+
+            print("Last Name:.")
+            lname = input()
+
+            print("Enter password: ")
+            keypass = input()
+
+            """
+            Create and save contacts
+            """
+            print('\n')
+            save_userinfo(create_userinfo(fname, lname, keypass))
+            print(f"Welcome {fname} {lname}, your details have been saved ")
+            print('\n')
+
+        elif short_code == 'save':
+
+
+
+
+if __name__ == '__main__':
+    main()
