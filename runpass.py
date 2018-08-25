@@ -24,6 +24,16 @@ def save_userinfo(userinfo):
     userinfo.save_userinfo()
 
 
+# CREDENTIALS FUNCTIONS
+
+def create_credentials(uname, servicename, access):
+    """
+    function to create credentials
+
+    """
+    new_credential = Credentials(uname, servicename,access)
+    return new_credential
+
 def main():
     print("Welcome Enter you Details")
     while True:
