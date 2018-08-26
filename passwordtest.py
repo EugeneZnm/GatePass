@@ -120,10 +120,10 @@ class TestCredentials(unittest.TestCase):
         :return:
         """
         self.new_credential.save_credentials()
-        test_credential = Credentials('')
+        test_credential = Credentials("Eugene znm", "whatsapp", "123ert")
         test_credential.save_credentials()
 
-        found_credential = Credentials.find_by_service('')
+        found_credential = Credentials.find_by_service('whatsapp')
         self.assertEqual(found_credential.service, test_credential.service)
 
 

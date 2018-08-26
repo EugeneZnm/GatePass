@@ -72,17 +72,17 @@ class Credentials:
         return paskey
 
     # 2.6 show credentials of user
-    @classmethod
-    def show_credentials(cls, user_name):
-        """
-        method to show credentials of the user
-
-        """
-        userinfo_show_credential = []
-        for credential in cls.show_credential:
-            if credential.user_name == user_name:
-                userinfo_show_credential.append(credential)
-        return userinfo_show_credential
+    # @classmethod
+    # def show_credentials(cls, user_name):
+    #     """
+    #     method to show credentials of the user
+    #
+    #     """
+    #     userinfo_show_credential = []
+    #     for credential in cls.show_credential:
+    #         if credential.user_name == user_name:
+    #             userinfo_show_credential.append(credential)
+    #     return userinfo_show_credential
 
     # 2.7 find service and return credentials
     @classmethod
@@ -91,6 +91,10 @@ class Credentials:
         method to find service and display credentials corresponding to service
 
         """
-        for credential in cls.show_credential:
+        for credential in cls.credential:
             if credential.service == service:
                 return credential
+
+    @classmethod
+    def display_credentials(cls):
+        return cls.credential

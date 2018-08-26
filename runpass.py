@@ -1,7 +1,6 @@
 # Importing Credentials class
 #
 # import pyperclip
-import string
 
 import random
 
@@ -29,12 +28,12 @@ def save_userinfo(userinfo):
 
 # CREDENTIALS FUNCTIONS
 
-def create_credentials(uname: object, servicename: object, access: object) -> object:
+def create_credentials(uname: object, servicename: object, access: object):
     """
     function to create credentials
 
     """
-    new_credential = Credentials(uname, servicename,access)
+    new_credential = Credentials(uname, servicename, access)
     return new_credential
 
 
@@ -51,15 +50,16 @@ def display_credentials():
     function to show credentials
 
     """
-    return Credentials.
+    return Credentials.display_credentials()
 
 
 def main():
-    global uname, servicename, access
+    # global uname, servicename, access
     print("Welcome Enter you Details")
     while True:
+        print('\n')
         print("Type in Shortcode to choose preferred action:"
-              "start - to enter user details,  save - to create credentials, keep - to display credentials")
+              "start - to enter user details,  save - to create credentials, show - to display credentials")
 
         short_code = input().lower()
         if short_code == "start":
@@ -92,21 +92,28 @@ def main():
 
             print("Your Password is: ")
 
-            chars = "abcdefghijklmnopqrstuvwxyz123456789"
             access = ''
+            chars = "abcdefghijklmnopqrstuvwxyz1234567890!#.,?"
             for c in range(10):
                 access = random.choice(chars)
-                print(access)
+                print(access, end='')
 
             save_credentials(create_credentials(uname, servicename, access))
 
-        elif short_code == 'keep':
+        elif short_code == 'show':
 
             if display_credentials():
                 print("Your stores credentials are: ")
 
-                for
+                for credential in display_credentials():
+                    print(f"username:{credential.user_name} \n service: {credential.service} \n password: "
+                          f"{credential.password}")
 
+                print('\n')
+            else:
+                print('\n')
+                print("No credetials saved")
+                print('\n')
 
 
 if __name__ == '__main__':
