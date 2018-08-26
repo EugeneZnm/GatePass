@@ -53,13 +53,30 @@ def display_credentials():
     return Credentials.display_credentials()
 
 
+def find_credential(service):
+    """
+    function to find credential by service
+
+    """
+    return Credentials.find_by_service(service)
+
+
+def check_across_credentials(service):
+
+    """
+    function to check if credentials exist with service
+
+    """
+    return Credentials.credential_exist(service)
+
 def main():
     # global uname, servicename, access
     print("Welcome Enter you Details")
     while True:
         print('\n')
         print("Type in Shortcode to choose preferred action:"
-              "start - to enter user details,  save - to create credentials, show - to display credentials")
+              "start - to enter user details,  save - to create credentials, show - to display credentials, "
+              "search -  to find by service, remove - to delete credentials")
 
         short_code = input().lower()
         if short_code == "start":
@@ -114,6 +131,18 @@ def main():
                 print('\n')
                 print("No credetials saved")
                 print('\n')
+
+        elif short_code == 'service':
+
+            print('Enter service to find credentials:')
+
+            search_service = input()
+            if check_across_credentials(search_service):
+                search_credential = find_credential(search_service)
+                print(f"Username:{search_credential.user_name} \n service: {search_credential.service} \n Password:"
+                      f"{search_credential.password}")
+            else:
+                print("Credentials for service don't exist")
 
 
 if __name__ == '__main__':

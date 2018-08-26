@@ -23,7 +23,7 @@ class Userinfo:
 
 class Credentials:
     # 2.1 class variable to store credentials
-    credential = []
+    credentiall = []
 
     # 2.5 creating list to display credentials
     show_credential = []
@@ -59,7 +59,7 @@ class Credentials:
         Method to save credential
 
         """
-        Credentials.credential.append(self)
+        Credentials.credentiall.append(self)
 
     # 2.4 generating random passwords
 
@@ -85,16 +85,28 @@ class Credentials:
     #     return userinfo_show_credential
 
     # 2.7 find service and return credentials
+
     @classmethod
     def find_by_service(cls, service):
         """
         method to find service and display credentials corresponding to service
 
         """
-        for credential in cls.credential:
+        for credential in cls.credentiall:
             if credential.service == service:
                 return credential
 
+    # 2.8
+    @classmethod
+    def credential_exist(cls, service):
+        """
+        check if credential exists from credential list
+        """
+        for credential in cls.credentiall:
+            if credential.service == service:
+                return True
+            return False
+
     @classmethod
     def display_credentials(cls):
-        return cls.credential
+        return cls.credentiall
