@@ -24,7 +24,7 @@ A user should be able to:
 ## Specifications
 
 
-    |      Behaviour        |           Input           |                                                                                                                                                                                            Output                                                                |  
+    |      Behaviour        |           Input           |   Output                                                                                                                                                                                                                                                         |  
     | --------------------- | ------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |Show navigation codes  | In terminal:$./runpass.py | Welcome Enter you Details.Type in Shortcode to choose preferred action:start - to enter user details,  save - to create credentials, show - to display credentials, search -  to find by service, remove - to delete credentials, copy - to copy service password|
     |Enter user details     | Enter : start             | Enter User Info, First Name:, Last Name:, Pawwsord                                                                                                                                                                                                               |
