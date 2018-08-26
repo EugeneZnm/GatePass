@@ -1,6 +1,6 @@
 # PASSWORD LOCKER
 
-## Built by EUGENE NZIOKI
+## Built by [EUGENE NZIOKI](https://github.com/EugeneZnm)
 
 ## Description
 
