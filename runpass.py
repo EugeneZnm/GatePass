@@ -1,6 +1,6 @@
 # Importing Credentials class
 #
-# import pyperclip
+import pyperclip
 
 import random
 
@@ -62,12 +62,29 @@ def find_credential(service):
 
 
 def check_across_credentials(service):
-
     """
     function to check if credentials exist with service
 
     """
     return Credentials.credential_exist(service)
+
+
+def del_credentials(service):
+    """
+    function to delete credentials
+
+    """
+    Credentials.delete_credentials(service)
+
+
+def copy_credentials(service):
+    """
+    function to copy credentials corresponding to service typed in
+    :param service:
+    :return:
+    """
+    return Credentials.copy_credentials(service)
+
 
 def main():
     # global uname, servicename, access
@@ -76,7 +93,7 @@ def main():
         print('\n')
         print("Type in Shortcode to choose preferred action:"
               "start - to enter user details,  save - to create credentials, show - to display credentials, "
-              "search -  to find by service, remove - to delete credentials")
+              "search -  to find by service, remove - to delete credentials, copy - to copy service password")
 
         short_code = input().lower()
         if short_code == "start":
@@ -129,10 +146,10 @@ def main():
                 print('\n')
             else:
                 print('\n')
-                print("No credetials saved")
+                print("No credentials saved")
                 print('\n')
 
-        elif short_code == 'service':
+        elif short_code == 'search':
 
             print('Enter service to find credentials:')
 
@@ -143,6 +160,25 @@ def main():
                       f"{search_credential.password}")
             else:
                 print("Credentials for service don't exist")
+
+        elif short_code == 'remove':
+
+            print("delete credential")
+
+            search_service = input()
+            if check_across_credentials(search_service):
+                search_service = find_credential(search_service)
+                del_credentials(search_service)
+            else:
+                print("credential doesn't exist")
+
+        elif short_code == 'copy':
+            print('')
+            service_selected = input('Enter name of Service whose credentials you will copy ')
+            copy_credentials(service_selected)
+            print('')
+        else:
+            print('No Credentials matching service')
 
 
 if __name__ == '__main__':

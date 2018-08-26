@@ -20,6 +20,12 @@ class Userinfo:
     def save_userinfo(self):
         Userinfo.user_details.append(self)
 
+    # 1.4 verification
+    # def check(self, first_name, last_name, passkey):
+    #     print(self.first_name)
+    #     if self.first_name == first_name and self.last_name == last_name and self.passkey == passkey:
+    #         print ("success")
+
 
 class Credentials:
     # 2.1 class variable to store credentials
@@ -60,6 +66,9 @@ class Credentials:
 
         """
         Credentials.credentiall.append(self)
+
+    # def save_multiple(self):
+
 
     # 2.4 generating random passwords
 
@@ -107,6 +116,30 @@ class Credentials:
                 return True
             return False
 
+    # 2.9
     @classmethod
     def display_credentials(cls):
+        """
+        method to display credentials
+        :return:
+        """
         return cls.credentiall
+
+    # 2.10
+    def delete_credentials(self):
+        """
+        method to delete credentials
+        :return:
+        """
+        Credentials.credentiall.remove(self)
+
+    # 2.11
+    @classmethod
+    def copy_credentials(cls, service):
+        """
+        method to copy credential information after credential's service is called
+        :param service:
+        :return:
+        """
+        find_credential = Credentials.find_by_service(service)
+        pyperclip.copy(find_credential.password)

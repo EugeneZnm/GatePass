@@ -84,7 +84,7 @@ class TestCredentials(unittest.TestCase):
 
         """
         self.new_credential.save_credentials()
-        self.assertEqual(len(Credentials.credential), 1)
+        self.assertEqual(len(Credentials.credentiall), 1)
 
     def test__save__multiple__credentials(self):
 
@@ -95,24 +95,24 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_credentials()
         test_credential = Credentials("Eugene znm", "whatsapp", "123ert")
         test_credential.save_credentials()
-        self.assertEqual(len(Credentials.credential), 2)
+        self.assertEqual(len(Credentials.credentiall), 2)
 
     def tearDown(self):
         """
         functions to clear credentials after every test
 
         """
-        Credentials.credential = []
+        Credentials.credentiall = []
         Userinfo.user_details = []
 
-    def test_show_credentials(self, user_name=None):
+    def test_show_credentials(self):
         """
         testing display of correct credentials
         :return: 
         """
         self.new_credential.save_credentials()
 
-        self.assertEqual(len(Credentials.show_credentials(user_name)), 0)
+        self.assertEqual(Credentials.display_credentials(), Credentials.credentiall)
 
     def test_find_by_service(self):
         """
