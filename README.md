@@ -9,7 +9,7 @@ user to store existing login credentials, generate new credentials
 for new accounts, copy credentials to clipboard and dictate length 
 of password to generate
 
-## User's 
+## User Stories
 
 These are the features that the application implements for use by a user
 
@@ -54,7 +54,7 @@ A user should be able to:
 
    * To run the application in terminal:
    
-        ``$ python3.6 runpass.py``                             
+        ``$ python3.6 passwordtest.py``                             
 
 ## Technologies Used
 
