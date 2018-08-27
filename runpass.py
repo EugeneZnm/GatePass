@@ -89,34 +89,31 @@ def copy_credentials(service):
 def main():
     # global uname, servicename, access
     print("Welcome Enter you Details")
+    print(" Enter User Info")
+
+    print("First Name:.")
+    fname = input()
+
+    print("Last Name:.")
+    lname = input()
+
+    print("Enter password: ")
+    keypass = input()
+
+    """
+    Create and save contacts
+    """
+    print('\n')
+    save_userinfo(create_userinfo(fname, lname, keypass))
+    print(f"Welcome {fname} {lname}, your details have been saved ")
     while True:
         print('\n')
-        print("Type in Shortcode to choose preferred action:"
-              "start - to enter user details,  save - to create credentials, show - to display credentials, "
-              "search -  to find by service, remove - to delete credentials, copy - to copy service password")
+        print("Type in Shortcode to choose preferred action: \n "
+              "save - to create credentials, \n show - to display credentials, \n "
+              "search -  to find by service, \n remove - to delete credentials, \n copy - to copy service password")
 
         short_code = input().lower()
-        if short_code == "start":
-            print(" Enter User Info")
-
-            print("First Name:.")
-            fname = input()
-
-            print("Last Name:.")
-            lname = input()
-
-            print("Enter password: ")
-            keypass = input()
-
-            """
-            Create and save contacts
-            """
-            print('\n')
-            save_userinfo(create_userinfo(fname, lname, keypass))
-            print(f"Welcome {fname} {lname}, your details have been saved ")
-            print('\n')
-
-        elif short_code == 'save':
+        if short_code == 'save':
 
             print("Enter name: ")
             uname = input()
@@ -125,11 +122,10 @@ def main():
             servicename = input()
 
             print("Your Password is: ")
-
             access = ''
             chars = "abcdefghijklmnopqrstuvwxyz1234567890!#.,?"
             for c in range(10):
-                access = random.choice(chars)
+                access = ''.join(random.choice(chars))
                 print(access, end='')
 
             save_credentials(create_credentials(uname, servicename, access))
@@ -140,10 +136,8 @@ def main():
                 print("Your stores credentials are: ")
 
                 for credential in display_credentials():
-                    print(f"username:{credential.user_name} \n service: {credential.service} \n password: "
-                          f"{credential.password}")
+                    print(f"username:{credential.user_name} \n service: {credential.service} \n password: {credential.password}")
 
-                print('\n')
             else:
                 print('\n')
                 print("No credentials saved")

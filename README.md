@@ -24,15 +24,15 @@ A user should be able to:
 ## Specifications
 
 
-    |      Behaviour        |           Input           |   Output                                                                                                                                                                                                                                                         |  
-    | --------------------- | ------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    |Show navigation codes  | In terminal:$./runpass.py | Welcome Enter you Details.Type in Shortcode to choose preferred action:start - to enter user details,  save - to create credentials, show - to display credentials, search -  to find by service, remove - to delete credentials, copy - to copy service password|
-    |Enter user details     | Enter : start             | Enter User Info, First Name:, Last Name:, Pawwsord                                                                                                                                                                                                               |
-    |Creating Credential    | Enter : save              | Enter Name: , Service Used: , Your Password is:, Welcome {first name} {last name}, your details have been saved                                                                                                                                                  |
-    |Show credentials       | Enter : show              | Your stores credentials are:                                                                                                                                                                                                                                     |                                             
-    |Search for credentials | Enter : search            | Enter service to find credentials:                                                                                                                                                                                                                               |
-    |Delete credentials     | Enter : remove            | delete credential                                                                                                                                                                                                                                                |
-    |copy credential        | Enter : copy              |                                                                                                                                                                                                                                                                  |
+|  Behaviour |  Input   |   Output    |  
+| :--------------------- | :-------------------------: | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Show navigation codes | **In terminal:$./runpass.py** | Welcome Enter you Details.Type in Shortcode to choose preferred action:start - to enter user details,  save - to create credentials, show - to display credentials, search -  to find by service, remove - to delete credentials, copy - to copy service password|
+|Enter user details | **Enter : start** | Enter User Info, First Name:, Last Name:, Password |
+|Creating Credential| **Enter : save**| Enter Name: , Service Used: , Your Password is:, Welcome {first name} {last name}, your details have been saved |
+|Show credentials | **Enter : show**| Your stores credentials are: Username, Servicename, Password|                                             
+|Search for credentials| **Enter : search** | Enter service to find credentials:|
+|Delete credentials | **Enter : remove** | delete credential |
+|copy credential | **Enter: copy** |                                                                                                                                                                                                                                                                 
     
 ## SetUp / Installation Requirements
 

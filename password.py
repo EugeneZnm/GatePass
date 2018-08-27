@@ -32,7 +32,7 @@ class Credentials:
     credentiall = []
 
     # 2.5 creating list to display credentials
-    show_credential = []
+    # show_credential = []
 
     # 2.2 creating instances of Credentials
     def __init__(self, user_name, service, password):
