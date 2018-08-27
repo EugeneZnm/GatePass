@@ -72,13 +72,13 @@ class Credentials:
 
     # 2.4 generating random passwords
 
-    def create_password(self, size=7, char=string.ascii_uppercase + string.ascii_lowercase + string.digits):
-        """
-        Generate random passwords function
-
-        """
-        paskey = ''.join(random.choice(char) for _ in range(size))
-        return paskey
+    # def create_password(self, size=7, char=string.ascii_uppercase + string.ascii_lowercase + string.digits):
+    #     """
+    #     Generate random passwords function
+    #
+    #     """
+    #     paskey = ''.join(random.choice(char) for _ in range(size))
+    #     return paskey
 
     # 2.6 show credentials of user
     # @classmethod

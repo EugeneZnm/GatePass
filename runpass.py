@@ -124,9 +124,9 @@ def main():
             print("Your Password is: ")
             access = ''
             chars = "abcdefghijklmnopqrstuvwxyz1234567890!#.,?"
-            for c in range(10):
-                access = ''.join(random.choice(chars))
-                print(access, end='')
+
+            access = ''.join(random.choice(chars)for _ in range(10))
+            print(access, end='')
 
             save_credentials(create_credentials(uname, servicename, access))
 
