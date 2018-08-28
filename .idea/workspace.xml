@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="661fa2ed-6980-4784-b21a-6d2c89f74829" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password.py" beforeDir="false" afterPath="$PROJECT_DIR$/password.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runpass.py" beforeDir="false" afterPath="$PROJECT_DIR$/runpass.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,36 +15,38 @@
     <session id="-103997183">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="12" />
+          <entry key="py" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="Python" value="12" />
+          <entry key="Python" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="2804" />
-          <entry key="py" value="10235" />
+          <entry key="py" value="10871" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="2804" />
-          <entry key="Python" value="10235" />
+          <entry key="Python" value="10871" />
         </counts>
       </usages-collector>
     </session>
@@ -52,10 +54,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/passwordtest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1155">
+              <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
+              <folding>
+                <element signature="e#31#46#0" expanded="true" />
+                <marker date="1535312869849" expanded="true" signature="239:245" ph="..." />
+                <marker date="1535312869849" expanded="true" signature="310:319" ph="..." />
+                <marker date="1535312869849" expanded="true" signature="1265:3885" ph="..." />
+                <marker date="1535312869849" expanded="true" signature="1351:1356" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/password.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="1020">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
                 <marker date="1535353477892" expanded="true" signature="65:69" ph="..." />
@@ -70,14 +88,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runpass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="124" column="23" lean-forward="true" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="23" />
+            <state relative-caret-position="509">
+              <caret line="202" column="31" lean-forward="true" selection-start-line="202" selection-start-column="31" selection-end-line="202" selection-end-column="31" />
               <folding>
                 <element signature="e#32#48#0" expanded="true" />
-                <marker date="1535354237753" expanded="true" signature="201:202" ph="..." />
-                <marker date="1535354237753" expanded="true" signature="673:676" ph="..." />
-                <marker date="1535354237753" expanded="true" signature="822:1549" ph="..." />
-                <marker date="1535354237753" expanded="true" signature="1381:1549" ph="..." />
+                <marker date="1535440312194" expanded="true" signature="211:212" ph="..." />
+                <marker date="1535440312194" expanded="true" signature="683:686" ph="..." />
+                <marker date="1535440312194" expanded="true" signature="832:1559" ph="..." />
+                <marker date="1535440312194" expanded="true" signature="1391:1559" ph="..." />
               </folding>
             </state>
           </provider>
@@ -87,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="264">
+              <first_editor relative-caret-position="465">
                 <caret line="31" column="98" selection-start-line="31" selection-start-column="98" selection-end-line="31" selection-end-column="98" />
               </first_editor>
               <second_editor />
@@ -110,11 +128,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="72" />
-    <option name="y" value="24" />
-    <option name="width" value="1366" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="307" />
+    <option name="y" value="159" />
+    <option name="width" value="778" />
+    <option name="height" value="716" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -154,7 +172,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/contact_list" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -236,20 +254,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="24" width="1366" height="744" extended-state="1" />
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.093939394" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.096969694" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28733766" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2872671" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958158" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32467532" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.30804953" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -265,8 +284,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/passwordtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+        <state relative-caret-position="1155">
+          <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
           <folding>
             <element signature="e#31#46#0" expanded="true" />
             <marker date="1535312869849" expanded="true" signature="239:245" ph="..." />
@@ -277,20 +296,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="264">
-            <caret line="31" column="98" selection-start-line="31" selection-start-column="98" selection-end-line="31" selection-end-column="98" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/password.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="1020">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
             <marker date="1535353477892" expanded="true" signature="65:69" ph="..." />
@@ -301,16 +310,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="465">
+            <caret line="31" column="98" selection-start-line="31" selection-start-column="98" selection-end-line="31" selection-end-column="98" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/runpass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="124" column="23" lean-forward="true" selection-start-line="124" selection-start-column="23" selection-end-line="124" selection-end-column="23" />
+        <state relative-caret-position="509">
+          <caret line="202" column="31" lean-forward="true" selection-start-line="202" selection-start-column="31" selection-end-line="202" selection-end-column="31" />
           <folding>
             <element signature="e#32#48#0" expanded="true" />
-            <marker date="1535354237753" expanded="true" signature="201:202" ph="..." />
-            <marker date="1535354237753" expanded="true" signature="673:676" ph="..." />
-            <marker date="1535354237753" expanded="true" signature="822:1549" ph="..." />
-            <marker date="1535354237753" expanded="true" signature="1381:1549" ph="..." />
+            <marker date="1535440312194" expanded="true" signature="211:212" ph="..." />
+            <marker date="1535440312194" expanded="true" signature="683:686" ph="..." />
+            <marker date="1535440312194" expanded="true" signature="832:1559" ph="..." />
+            <marker date="1535440312194" expanded="true" signature="1391:1559" ph="..." />
           </folding>
         </state>
       </provider>

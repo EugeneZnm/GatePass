@@ -132,7 +132,8 @@ def main():
         print('\n')
         print("Type in Shortcode to choose preferred action: \n "
               "save - to create credentials, \n show - to display credentials, \n "
-              "search -  to find by service, \n remove - to delete credentials, \n copy - to copy service password")
+              "search -  to find by service, \n remove - to delete credentials, \n copy - to copy service password, "
+              "\n exit -to exit app")
 
         short_code = input().lower()
         if short_code == 'save':
@@ -192,8 +193,17 @@ def main():
             service_selected = input('Enter name of Service whose credentials you will copy ')
             copy_credentials(service_selected)
             print('')
+
+            # else:
+            #     print('No Credentials matching service')
+
+        elif short_code == "exit":
+            print(f"ADIOS {first_name} {last_name} ")
+
         else:
-            print('No Credentials matching service')
+            print("wrong code")
+
+        break
 
 
 if __name__ == '__main__':
