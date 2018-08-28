@@ -1,7 +1,7 @@
 # Importing Credentials class
 #
 import pyperclip
-
+import sys
 import random
 
 from password import Credentials
@@ -87,7 +87,7 @@ def copy_credentials(service):
 
 
 def main():
-    # global uname, servicename, access
+    global uname, servicename, access, fname, lname, keypass, user_login
     print("Welcome Enter you Details")
     print(" Enter User Info")
 
@@ -105,7 +105,29 @@ def main():
     """
     print('\n')
     save_userinfo(create_userinfo(fname, lname, keypass))
-    print(f"Welcome {fname} {lname}, your details have been saved ")
+    user_signup= (fname, lname, keypass)
+    if user_signup == user_signup:
+        print(f"Welcome {fname} {lname}, your details have been saved ")
+
+        print("Type login to login ingot your account")
+
+    short_code = input().lower()
+    if short_code == 'login':
+        print('Enter your firstname')
+        first_name = input()
+        print('Enter your last name')
+        last_name = input()
+        print('Enter your password')
+        pass_word = input()
+
+    user_exist = (first_name, last_name, pass_word)
+    if user_signup != user_exist:
+        print("login unsuccessful, wrong credentials")
+
+        sys.exit()
+    else:
+        print(f"welcome {first_name} {last_name}, login successful")
+
     while True:
         print('\n')
         print("Type in Shortcode to choose preferred action: \n "
@@ -124,7 +146,6 @@ def main():
             print("Your Password is: ")
             access = ''
             chars = "abcdefghijklmnopqrstuvwxyz1234567890!#.,?"
-
             access = ''.join(random.choice(chars)for _ in range(10))
             print(access, end='')
 
